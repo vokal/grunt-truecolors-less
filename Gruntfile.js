@@ -33,23 +33,14 @@ module.exports = function ( grunt )
         default_options: {
             options: {},
             files: {
-                "tmp/default_options": [ "test/fixtures/testing", "test/fixtures/123" ]
-            }
-        },
-        custom_options: {
-            options: {
-                separator: ": ",
-                punctuation: " !!!"
-            },
-            files: {
-                "tmp/custom_options": [ "test/fixtures/testing", "test/fixtures/123" ]
+                "tmp/default_options.less": [ "test/fixtures/ht.truecolors" ]
             }
         }
     },
 
     // Unit tests.
     nodeunit: {
-      tests: [ "test/*_test.js" ]
+        tests: [ "test/*_test.js" ]
     }
 
     });
