@@ -1,10 +1,10 @@
 /*
- * grunt-truecolors-less
- * https://github.com/Jarrett/grunt-truecolors-less
- *
- * Copyright (c) 2015 Vokal
- * Licensed under the MIT license.
- */
+* grunt-truecolors-less
+* https://github.com/vokal/grunt-truecolors-less
+*
+* Copyright (c) 2015 Vokal
+* Licensed under the MIT license.
+*/
 
 "use strict";
 
@@ -19,29 +19,29 @@ module.exports = function ( grunt )
                 "<%= nodeunit.tests %>"
             ],
             options: {
-            jshintrc: ".jshintrc"
-        }
-    },
-
-    // Before generating any new files, remove any previously-created files.
-    clean: {
-        tests: [ "tmp" ]
-    },
-
-    // Configuration to be run (and then tested).
-    truecolors_less: {
-        default_options: {
-            options: {},
-            files: {
-                "tmp/default_options.less": [ "test/fixtures/ht.truecolors" ]
+                jshintrc: ".jshintrc"
             }
-        }
-    },
+        },
 
-    // Unit tests.
-    nodeunit: {
-        tests: [ "test/*_test.js" ]
-    }
+        // Before generating any new files, remove any previously-created files.
+        clean: {
+            tests: [ "tmp" ]
+        },
+
+        // Configuration to be run (and then tested).
+        truecolors_less: {
+            default_options: {
+                options: {},
+                files: {
+                    "tmp/default_options.less": [ "test/fixtures/ht.truecolors" ]
+                }
+            }
+        },
+
+        // Unit tests.
+        nodeunit: {
+            tests: [ "test/*_test.js" ]
+        }
 
     });
 
