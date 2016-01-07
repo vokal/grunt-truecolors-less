@@ -36,6 +36,6 @@
     "gruntplugin"
   ],
   "dependencies": {
-    "truecolors-less": "github:vokal/truecolors-less"
+    "truecolors-less": "^1.0.1"
   }
 }

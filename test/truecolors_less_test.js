@@ -2,26 +2,6 @@
 
 var grunt = require( "grunt" );
 
-/*
-  ======== A Handy Little Nodeunit Reference ========
-  https://github.com/caolan/nodeunit
-
-  Test methods:
-    test.expect(numAssertions)
-    test.done()
-  Test assertions:
-    test.ok(value, [message])
-    test.equal(actual, expected, [message])
-    test.notEqual(actual, expected, [message])
-    test.deepEqual(actual, expected, [message])
-    test.notDeepEqual(actual, expected, [message])
-    test.strictEqual(actual, expected, [message])
-    test.notStrictEqual(actual, expected, [message])
-    test.throws(block, [error], [message])
-    test.doesNotThrow(block, [error], [message])
-    test.ifError(value)
-*/
-
 exports.truecolors_less = {
     setUp: function ( done )
     {
@@ -32,8 +12,9 @@ exports.truecolors_less = {
     {
         test.expect( 1 );
 
-        var actual = grunt.file.read( "tmp/default_options.less" );
+        var actual = grunt.file.read( "tmp/default_options.less" ) + "\n";
         var expected = grunt.file.read( "test/expected/default_options.less" );
+
         test.equal( actual, expected, "should write LESS docuement." );
 
         test.done();
